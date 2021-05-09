@@ -95,6 +95,7 @@ async function gfgTopic(gfgUrl, tab, tabs, browser) {
     console.log("Completed and printed in JSON file");
     const motUrl = "https://theultralinx.com/2016/01/awesome-quotes-posters-pictures/";
     await motivation(motUrl);
+    browser.close();
 }
 
 async function motivation(motUrl) {
@@ -125,7 +126,7 @@ async function motivation(motUrl) {
 
     final.push(randomUrl);
     console.log(final);
-    browser.close();
+    
 }
 
 jobFunc();
