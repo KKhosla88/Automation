@@ -31,7 +31,6 @@ async function jobFunc() {
             const Organization = organization.replace("\n", "");
             let url = node.querySelector('a').getAttribute('href');
             const Url = url.replace("/", "https://in.indeed.com/");
-
             return {
                 Role,
                 Organization,
@@ -58,9 +57,8 @@ async function jobFunc() {
     console.log("Completed and Printed in JSON file");
     const gfgUrl = "https://practice.geeksforgeeks.org/explore/?problemType=full&difficulty%5B%5D=1&page=1";
     await gfgTopic(gfgUrl, tab, tabs, browser);
-}
-async function gfgTopic(gfgUrl, tab, tabs, browser) {
-
+    }
+    async function gfgTopic(gfgUrl, tab, tabs, browser) {
     tab = await browser.newPage();
     //tab=tabs[0];
     await tab.goto(gfgUrl);
@@ -96,9 +94,9 @@ async function gfgTopic(gfgUrl, tab, tabs, browser) {
     const motUrl = "https://theultralinx.com/2016/01/awesome-quotes-posters-pictures/";
     await motivation(motUrl);
     browser.close();
-}
+    }
 
-async function motivation(motUrl) {
+    async function motivation(motUrl) {
     console.log("Still working dont quit");
     let browser = await puppeteer.launch
         ({
@@ -123,11 +121,8 @@ async function motivation(motUrl) {
     let possible = Math.floor(Math.random() * 40);
     let randomUrl = imgUrl[possible];
     //const lUrl=randomUrl.replace("murl","");
-
     final.push(randomUrl);
-    console.log(final);
-    
-}
-
+    console.log(final); 
+  }
 jobFunc();
 
